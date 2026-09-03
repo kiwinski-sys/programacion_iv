@@ -13,16 +13,9 @@ Desarrollo de aplicaciones moviles.
 
 # Ejecucion de flutter doctor
 
+<img width="708" height="216" alt="flutterdoctor" src="https://github.com/user-attachments/assets/3214ef80-1e01-422a-931a-2fed328cbf04" />
 
+# Página generada por el código:
 
-This project is a starting point for a Flutter application.
+<img width="540" height="1170" alt="Screenshot_1788401684" src="https://github.com/user-attachments/assets/1d5befb1-fec6-4990-ad4f-8019eda653d6" />
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
