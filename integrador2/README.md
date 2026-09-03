@@ -27,3 +27,11 @@ Cambiamos el nombre de la aplicación a "Juegos KI" y el ícono a:
 <img width="225" height="233" alt="image" src="https://github.com/user-attachments/assets/d510dacf-cc3b-4b2b-84d9-0578d61b9bca" />
 
 
+# Pantallas de la aplicación:
+
+<img width="591" height="431" alt="image" src="https://github.com/user-attachments/assets/a2eb2135-82f5-4a6d-9bad-19760e55f5c0" />
+
+
+<img width="591" height="431" alt="image" src="https://github.com/user-attachments/assets/d7013948-0c91-4e62-bd41-284313a96cba" />
+
+
