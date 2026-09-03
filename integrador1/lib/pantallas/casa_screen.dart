@@ -8,7 +8,7 @@ const HomeScreen({super.key});
   Widget build(BuildContext context) {
     return  Scaffold(
       body: Center(
-         child: Text('Mis libros favoritos'),
+         child: Text('Mis libros favoritos 2'),
       ),
     );
   }
