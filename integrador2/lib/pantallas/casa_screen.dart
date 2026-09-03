@@ -131,26 +131,15 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(height: 10),
 
                   
-                  ElevatedButton.icon(
-                    onPressed: () {},
-                    icon: const Icon(Icons.explore),
-                    label: const Text('Explorar Todo el Catálogo'),
-                    style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(vertical: 12),
-                    ),
-                  ),
+
                 ],
               ),
             ),
           ],
         ),
       ),
-      // Widget 12: FloatingActionButton
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'Añadir Juego',
-        child: const Icon(Icons.add),
-      ),
+      
+
     );
   }
 }
