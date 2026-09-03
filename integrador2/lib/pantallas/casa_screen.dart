@@ -91,9 +91,8 @@ class HomeScreen extends StatelessWidget {
                       title: const Text('Género'),
                       subtitle: const Text('Acción, RPG, Aventura, Estrategia...'),
                       trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-                      onTap: () {
+                      onTap: () => Navigator.pushNamed(context, 'genero'), 
                         
-                      },
                     ),
                   ),
 
@@ -109,9 +108,7 @@ class HomeScreen extends StatelessWidget {
                       title: const Text('Título del juego'),
                       subtitle: const Text('Catálogo de juegos populares'),
                       trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-                      onTap: () {
-                        
-                      },
+                      onTap: () => Navigator.pushNamed(context, 'titulo'),
                     ),
                   ),
 
@@ -127,9 +124,7 @@ class HomeScreen extends StatelessWidget {
                       title: const Text('Detalles del juego'),
                       subtitle: const Text('Información técnica y reseñas'),
                       trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-                      onTap: () {
-                        
-                      },
+                      onTap: () => Navigator.pushNamed(context, 'detalle'),
                     ),
                   ),
 
