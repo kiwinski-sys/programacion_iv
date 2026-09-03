@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Mis libros favoritos',
+      title: 'Mis libros favoritos 2',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
