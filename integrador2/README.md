@@ -15,4 +15,15 @@ Desarrollo de aplicaciones móviles.
 
 <img width="813" height="135" alt="image" src="https://github.com/user-attachments/assets/2be6d17b-379f-4c68-92cd-e6121ed496a3" />
 
+Mofificación del archivo pubspec.yaml
+
+<img width="550" height="167" alt="image" src="https://github.com/user-attachments/assets/dccb8027-f742-400c-9eb0-7297492831b0" />
+
+
+Cambiamos el nombre de la aplicación a "Juegos KI" y el ícono a:
+
+<img width="92" height="92" alt="image" src="https://github.com/user-attachments/assets/6dd4805d-edf0-4cac-9a2c-9a391026805c" />
+
+<img width="225" height="233" alt="image" src="https://github.com/user-attachments/assets/d510dacf-cc3b-4b2b-84d9-0578d61b9bca" />
+
 
