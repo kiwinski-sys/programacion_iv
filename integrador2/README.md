@@ -1,8 +1,8 @@
-# Proyecto Integrador1
-# MIS LIBROS FAVORITOS
+# Proyecto Integrador 2
+# MIS JUEGOS FAVORITOS
 
 PROGRAMACION IV
-Desarrollo de aplicaciones moviles.
+Desarrollo de aplicaciones móviles.
 
 # Herramientas utilizadas
 
@@ -11,18 +11,8 @@ Desarrollo de aplicaciones moviles.
 - Flutter
 - Visual Studio Code
 
-# Ejecucion de flutter doctor
+# Ejecucion de flutter pub add url_launcher
+
+<img width="813" height="135" alt="image" src="https://github.com/user-attachments/assets/2be6d17b-379f-4c68-92cd-e6121ed496a3" />
 
 
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
