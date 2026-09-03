@@ -23,7 +23,7 @@ class TituloScreen extends StatelessWidget {
       {
         'titulo': 'Starcraft 2',
         'genero': 'Estrategia',
-        'imagen': 'https://picsum.photos/seed/sc2/400/300',
+        'imagen': 'assets/titulos/starcraft2.jpeg',
         'descripcion': 'El referente de la estrategia en tiempo real donde tres razas únicas (Terran, Zerg y Protoss) luchan por el dominio galáctico.',
         'calificacion': '4.9',
         'plataformas': 'PC',
@@ -31,7 +31,7 @@ class TituloScreen extends StatelessWidget {
       {
         'titulo': 'Age of Empires 4',
         'genero': 'Estrategia',
-        'imagen': 'https://picsum.photos/seed/aoe4/400/300',
+        'imagen': 'assets/titulos/ageofempire.jpeg',
         'descripcion': 'Revive las grandes batallas históricas construyendo imperios, gestionando recursos y liderando ejércitos a través de la historia.',
         'calificacion': '4.7',
         'plataformas': 'PC, Xbox',
@@ -41,7 +41,7 @@ class TituloScreen extends StatelessWidget {
       {
         'titulo': 'Pragmata',
         'genero': 'Acción',
-        'imagen': 'https://picsum.photos/seed/pragmata/400/300',
+        'imagen': 'assets/titulos/pragmata.jpeg',
         'descripcion': 'Una misteriosa aventura de acción ambientada en un mundo distópico en la Luna, con mecánicas de combate y exploración de ciencia ficción.',
         'calificacion': '4.5',
         'plataformas': 'PS5, Xbox, PC',
@@ -49,7 +49,7 @@ class TituloScreen extends StatelessWidget {
       {
         'titulo': 'Diablo 4',
         'genero': 'Acción',
-        'imagen': 'https://picsum.photos/seed/diablo4/400/300',
+        'imagen': 'assets/titulos/diablo4.jpeg',
         'descripcion': 'Enfréntate a las huestes del Infierno en un mundo abierto oscuro repleto de hordas de demonios, mazmorras e incontables tesoros.',
         'calificacion': '4.6',
         'plataformas': 'PS5, Xbox, PC',
@@ -59,7 +59,7 @@ class TituloScreen extends StatelessWidget {
       {
         'titulo': 'Mass Effect',
         'genero': 'Rol',
-        'imagen': 'https://picsum.photos/seed/masseffect/400/300',
+        'imagen': 'assets/titulos/masseffect.jpeg',
         'descripcion': 'Una ópera espacial donde tus decisiones moldean el destino de la galaxia a través de la piel del Comandante Shepard.',
         'calificacion': '4.8',
         'plataformas': 'PS4, Xbox, PC',
@@ -67,7 +67,7 @@ class TituloScreen extends StatelessWidget {
       {
         'titulo': 'Witcher 3',
         'genero': 'Rol',
-        'imagen': 'https://picsum.photos/seed/witcher3/400/300',
+        'imagen': 'assets/titulos/witcher3.jpeg',
         'descripcion': 'Acompaña a Geralt de Rivia, un cazador de monstruos a sueldo, en la búsqueda de la niña de la profecía en un vasto mundo abierto.',
         'calificacion': '5.0',
         'plataformas': 'PS5, Xbox, Switch, PC',
@@ -77,7 +77,7 @@ class TituloScreen extends StatelessWidget {
       {
         'titulo': 'Forza Horizon 4',
         'genero': 'Deportes',
-        'imagen': 'https://picsum.photos/seed/forza4/400/300',
+        'imagen': 'assets/titulos/forzahorizon4.jpeg',
         'descripcion': 'Disfruta de carreras automovilísticas en un festival abierto ambientado en Gran Bretaña con estaciones del año cambiantes dinámicamente.',
         'calificacion': '4.8',
         'plataformas': 'Xbox, PC',
@@ -85,7 +85,7 @@ class TituloScreen extends StatelessWidget {
       {
         'titulo': 'Street Fighter 5',
         'genero': 'Deportes',
-        'imagen': 'https://picsum.photos/seed/sf5/400/300',
+        'imagen': 'assets/titulos/streetfighter5.jpeg',
         'descripcion': 'Competencia de lucha de clase mundial con luchadores legendarios, combos dinámicos y combate multijugador competitivo.',
         'calificacion': '4.4',
         'plataformas': 'PS4, PC',
@@ -131,7 +131,7 @@ class TituloScreen extends StatelessWidget {
                       borderRadius: const BorderRadius.vertical(
                         top: Radius.circular(12),
                       ),
-                      child: Image.network(
+                      child: Image.asset(
                         juego['imagen']!,
                         fit: BoxFit.cover,
                         errorBuilder: (context, error, stackTrace) =>
