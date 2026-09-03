@@ -105,6 +105,8 @@ class TituloScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Juegos de $generoSeleccionado'),
+        backgroundColor: Colors.deepPurple,
+        foregroundColor: Colors.white,
       ),
       body: Padding(
         padding: const EdgeInsets.all(12.0),

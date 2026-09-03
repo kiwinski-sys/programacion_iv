@@ -1,34 +1,84 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
+
+  // Función para abrir la aplicación de correo
+  Future<void> _enviarCorreo() async {
+    final Uri emailUri = Uri(
+      scheme: 'mailto',
+      path: 'k.iwinski@eston.ecotec.edu.ec',
+      queryParameters: {
+        'subject': 'Consulta / Comentario sobre la App de Videojuegos',
+      },
+    );
+
+    if (!await launchUrl(emailUri)) {
+      debugPrint('No se pudo abrir la app de correo');
+    }
+  }
+
+  // Función para mostrar el AlertDialog informativo
+  void _mostrarMensajeDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Row(
+            children: [
+              Icon(Icons.mark_email_read, color: Colors.deepPurple),
+              SizedBox(width: 10),
+              Text('Mensaje'),
+            ],
+          ),
+          content: const Text(
+            'Escríbeme, tus comentarios son importantes, te responderé en cuanto me sea posible',
+            style: TextStyle(fontSize: 15),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop(); // Cierra el diálogo
+              },
+              child: const Text('Aceptar'),
+            ),
+          ],
+        );
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Mis Juegos de Video'),
+        title: const Text('Mis juegos de video'),
         centerTitle: true,
+        backgroundColor: Colors.deepPurple,
+        foregroundColor: Colors.white,
         actions: [
-          // Widget 1: IconButton
           IconButton(
             icon: const Icon(Icons.settings),
             onPressed: () {},
           ),
         ],
       ),
-      // Widget 2: Padding
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            
+            // Avatar de usuario
             const CircleAvatar(
-              radius: 50,              
+              radius: 50,
               backgroundImage: AssetImage('assets/avatarki.png'),
+              /* backgroundColor: Colors.deepPurpleAccent,
+              child: Icon(
+                Icons.sports_esports,
+                size: 50,
+                color: Colors.white,
+              ), */
             ),
-            
-        
             const SizedBox(height: 12),
 
             // Nombre
@@ -39,25 +89,24 @@ class HomeScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-
             const SizedBox(height: 12),
 
-            
+            // Tarjeta introductoria
             Card(
               elevation: 4,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
+              child: const Padding(
+                padding: EdgeInsets.all(16.0),
                 child: Column(
-                  children: const [
+                  children: [
                     Text(
                       '¡Bienvenido al Mundo Gamer!',
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w600,
-                        color: Colors.deepPurpleAccent,
+                        color: Colors.deepPurple,
                       ),
                     ),
                     SizedBox(height: 8),
@@ -71,75 +120,97 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
 
-            
-            const Divider(height: 32, thickness: 1),
+            const Divider(height: 24, thickness: 1),
 
-            
+            // Opciones de navegación
             Expanded(
               child: ListView(
                 children: [
-                  
                   Container(
+                    margin: const EdgeInsets.only(bottom: 8),
                     decoration: BoxDecoration(
+                      color: Colors.deepPurple.shade50,
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.white10,
                     ),
-                    margin: const EdgeInsets.only(bottom: 10),
-                    
                     child: ListTile(
-                      leading: const Icon(Icons.category, color: Colors.purpleAccent),
+                      leading: const Icon(Icons.category, color: Colors.deepPurple),
                       title: const Text('Género'),
-                      subtitle: const Text('Acción, RPG, Aventura, Estrategia...'),
+                      subtitle: const Text('Estrategia, Acción, Rol, Deportes'),
                       trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-                      onTap: () => Navigator.pushNamed(context, 'genero'), 
-                        
+                      onTap: () => Navigator.pushNamed(context, 'genero'),
                     ),
                   ),
 
                   Container(
+                    margin: const EdgeInsets.only(bottom: 8),
                     decoration: BoxDecoration(
+                      color: Colors.deepPurple.shade50,
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.white10,
                     ),
-                    margin: const EdgeInsets.only(bottom: 10),
-                    // ListTile (Título)
                     child: ListTile(
-                      leading: const Icon(Icons.videogame_asset, color: Colors.blueAccent),
-                      title: const Text('Título del juego'),
-                      subtitle: const Text('Catálogo de juegos populares'),
+                      leading: const Icon(Icons.videogame_asset, color: Colors.deepPurple),
+                      title: const Text('Título'),
+                      subtitle: const Text('Catálogo de videojuegos'),
                       trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-                      onTap: () => Navigator.pushNamed(context, 'titulo'),
+                      onTap: () => Navigator.pushNamed(context, 'genero'),
                     ),
                   ),
 
                   Container(
+                    margin: const EdgeInsets.only(bottom: 8),
                     decoration: BoxDecoration(
+                      color: Colors.deepPurple.shade50,
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.white10,
                     ),
-                    margin: const EdgeInsets.only(bottom: 10),
-                    // ListTile (Detalle)
                     child: ListTile(
-                      leading: const Icon(Icons.info_outline, color: Colors.greenAccent),
-                      title: const Text('Detalles del juego'),
-                      subtitle: const Text('Información técnica y reseñas'),
+                      leading: const Icon(Icons.info_outline, color: Colors.deepPurple),
+                      title: const Text('Detalle'),
+                      subtitle: const Text('Información general del juego'),
                       trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-                      onTap: () => Navigator.pushNamed(context, 'detalle'),
+                      onTap: () => Navigator.pushNamed(context, 'genero'),
                     ),
                   ),
 
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 12),
 
-                  
-
+                  // Sección final con los botones de Correo e Información (AlertDialog)
+                  Container(
+                    padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade100,
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(color: Colors.grey.shade300),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        // Ícono para enviar correo
+                        IconButton(
+                          icon: const Icon(Icons.email, size: 28, color: Colors.deepPurple),
+                          tooltip: 'Enviar Correo',
+                          onPressed: _enviarCorreo,
+                        ),
+                        const SizedBox(width: 20),
+                        // Ícono que activa el AlertDialog
+                        IconButton(
+                          icon: const Icon(Icons.info, size: 28, color: Colors.amber),
+                          tooltip: 'Información de contacto',
+                          onPressed: () => _mostrarMensajeDialog(context),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
           ],
         ),
       ),
-      
-
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        tooltip: 'Añadir Juego',
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }

@@ -36,6 +36,8 @@ const GeneroScreen({super.key});
     return Scaffold(
       appBar: AppBar(
         title: const Text('Selecciona un Género'),
+        backgroundColor: Colors.deepPurple,
+        foregroundColor: Colors.white,
       ),
       body: ListView.builder(
         padding: const EdgeInsets.all(12.0),

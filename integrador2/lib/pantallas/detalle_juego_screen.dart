@@ -21,6 +21,8 @@ const DetalleScreen({super.key});
     return  Scaffold(
       appBar: AppBar(
         title: Text(juego['titulo']!),
+        backgroundColor: Colors.deepPurple,
+        foregroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
         child: Column(
