@@ -67,7 +67,7 @@ class TituloScreen extends StatelessWidget {
       {
         'titulo': 'Witcher 3',
         'genero': 'Rol',
-        'imagen': 'assets/titulos/witcher3.jpeg',
+        'imagen': 'assets/titulos/witcher.jpeg',
         'descripcion': 'Acompaña a Geralt de Rivia, un cazador de monstruos a sueldo, en la búsqueda de la niña de la profecía en un vasto mundo abierto.',
         'calificacion': '5.0',
         'plataformas': 'PS5, Xbox, Switch, PC',
@@ -77,7 +77,7 @@ class TituloScreen extends StatelessWidget {
       {
         'titulo': 'Forza Horizon 4',
         'genero': 'Deportes',
-        'imagen': 'assets/titulos/forzahorizon4.jpeg',
+        'imagen': 'assets/titulos/forza.jpeg',
         'descripcion': 'Disfruta de carreras automovilísticas en un festival abierto ambientado en Gran Bretaña con estaciones del año cambiantes dinámicamente.',
         'calificacion': '4.8',
         'plataformas': 'Xbox, PC',
@@ -85,7 +85,7 @@ class TituloScreen extends StatelessWidget {
       {
         'titulo': 'Street Fighter 5',
         'genero': 'Deportes',
-        'imagen': 'assets/titulos/streetfighter5.jpeg',
+        'imagen': 'assets/titulos/streetfighter.jpeg',
         'descripcion': 'Competencia de lucha de clase mundial con luchadores legendarios, combos dinámicos y combate multijugador competitivo.',
         'calificacion': '4.4',
         'plataformas': 'PS4, PC',

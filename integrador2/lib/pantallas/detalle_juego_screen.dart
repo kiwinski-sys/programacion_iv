@@ -32,7 +32,7 @@ const DetalleScreen({super.key});
               height: 220,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: NetworkImage(juego['imagen']!),
+                  image: AssetImage(juego['imagen']!),
                   fit: BoxFit.cover,
                 ),
               ),
