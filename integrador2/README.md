@@ -1,3 +1,64 @@
+# Proyecto Integrador 3
+# MIS JUEGOS FAVORITOS - desarrollo a continuación del integrador 2
+
+PROGRAMACION IV
+Desarrollo de aplicaciones móviles.
+
+- Nombre del proyecto.
+
+  Juegos KI
+  
+- Descripción de la aplicación.
+
+  Muestra un catálogo de mis juegos preferidos
+  
+- Objetivo.
+
+  Es una aplicación informativa que ofrece detalles de los juegos y agregarlos a una lista de favoritos.
+  
+- Funcionalidades principales.
+
+  - Provider para agregar favoritos.
+  - Navegación entre páginas.
+  - Email de contacto
+  - Notificaciones
+    
+- Tecnologías y paquetes utilizados.
+
+  - Flutter, Dart, VS Code
+  - Paquetes url_launcher
+  - provider
+  
+- Estructura de carpetas del proyecto.
+
+  Se estructuró de la siguiente manera:
+
+  <img width="975" height="217" alt="image" src="https://github.com/user-attachments/assets/6acd5ff7-7eec-4b26-8a1a-cfb3b84fb67b" />
+
+- Explicación breve del Provider implementado.
+
+  Si marcas un juego como favorito dentro de la pantalla de detalles o en la tarjeta, el contador en la pantalla de inicio (HomeScreen) y la
+  lista en Mis Favoritos se actualizan al instante sin necesidad de recargar manualmente la pantalla.
+  
+- Descripción de los widgets reutilizables creados.
+
+  OpcionMenuWidget: Widget reutilizable que empaqueta un contenedor estilizado con un ícono, título, subtítulo y flecha de navegación (ListTile).
+  Se utiliza en HomeScreen y GeneroScreen para mantener una interfaz limpia y uniforme.
+
+  TarjetaJuegoWidget: Componente reutilizable para presentar cada videojuego dentro de una cuadrícula (GridView). Incluye la imagen, el título,
+  un botón para ver el detalle y un botón interactivo flotante (IconButton) para marcar o desmarcar el juego como favorito en tiempo real.
+  
+- Instrucciones básicas para ejecutar el proyecto.
+
+  - Flutter SDK (versión actualizada).
+  - Dart SDK
+  - Android Studio o Visual Studio Code con la extensión oficial de Flutter instalada.
+  - Un Emulador (Android/iOS)
+
+- Capturas de las principales pantallas.
+- Captura o evidencia de la funcionalidad administrada mediante Provider.
+- Autor.
+
 # Proyecto Integrador 2
 # MIS JUEGOS FAVORITOS
 
