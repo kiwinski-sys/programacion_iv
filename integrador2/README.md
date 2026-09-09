@@ -56,8 +56,34 @@ Desarrollo de aplicaciones móviles.
   - Un Emulador (Android/iOS)
 
 - Capturas de las principales pantallas.
+
+  <img width="270" height="585" alt="Screenshot_1788924231" src="https://github.com/user-attachments/assets/38a583b7-e8e6-4b73-bbc7-b58c214fbb47" />
+  <img width="270" height="585" alt="Screenshot_1788924236" src="https://github.com/user-attachments/assets/d2cad95d-9bb2-4e9d-84d2-8fb77125d142" />
+  <img width="270" height="585" alt="Screenshot_1788924242" src="https://github.com/user-attachments/assets/0d0b5e64-0888-4213-988f-499f8af2afc5" />
+  <img width="270" height="585" alt="Screenshot_1788924249" src="https://github.com/user-attachments/assets/a9dd7dd5-bd94-45f2-b5cc-a28de61d8e03" />
+  <img width="270" height="585" alt="Screenshot_1788924254" src="https://github.com/user-attachments/assets/87635b6a-1fa3-4190-8084-9f31e65eee4d" />
+
 - Captura o evidencia de la funcionalidad administrada mediante Provider.
+
+  <img width="270" height="585" alt="Screenshot_1788925411" src="https://github.com/user-attachments/assets/8696ecec-6717-414c-85b4-5e4194becc0a" />
+  <img width="270" height="585" alt="Screenshot_1788925438" src="https://github.com/user-attachments/assets/39890c3d-3b2f-4b46-83d1-939fde5d8d47" />
+  <img width="270" height="585" alt="Screenshot_1788925446" src="https://github.com/user-attachments/assets/98afecfe-2577-4157-bdf1-472b7bce077b" />
+  <img width="270" height="585" alt="Screenshot_1788925452" src="https://github.com/user-attachments/assets/462a3814-af79-4b92-9ba4-ac29c9d11980" />
+  <img width="270" height="585" alt="Screenshot_1788925460" src="https://github.com/user-attachments/assets/4f47686b-0e86-4694-8920-10b03a432753" />
+  <img width="270" height="585" alt="Screenshot_1788925466" src="https://github.com/user-attachments/assets/a32913d2-54d9-455f-b6de-beca3ba779cf" />
+
+
+  
+
+  
+
+  
+
+
 - Autor.
+
+  Krystian Marcin Iwinski
+  
 
 # Proyecto Integrador 2
 # MIS JUEGOS FAVORITOS
