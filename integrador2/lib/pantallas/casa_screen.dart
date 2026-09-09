@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:integrador1/provider/juegos_provider.dart';
+import 'package:integrador1/widgets/opcion_menu_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
-  // Función para abrir la aplicación de correo
   Future<void> _enviarCorreo() async {
     final Uri emailUri = Uri(
       scheme: 'mailto',
@@ -19,7 +21,6 @@ class HomeScreen extends StatelessWidget {
     }
   }
 
-  // Función para mostrar el AlertDialog informativo
   void _mostrarMensajeDialog(BuildContext context) {
     showDialog(
       context: context,
@@ -38,9 +39,7 @@ class HomeScreen extends StatelessWidget {
           ),
           actions: [
             TextButton(
-              onPressed: () {
-                Navigator.of(context).pop(); // Cierra el diálogo
-              },
+              onPressed: () => Navigator.of(context).pop(),
               child: const Text('Aceptar'),
             ),
           ],
@@ -68,20 +67,11 @@ class HomeScreen extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            // Avatar de usuario
             const CircleAvatar(
               radius: 50,
               backgroundImage: AssetImage('assets/avatarki.png'),
-              /* backgroundColor: Colors.deepPurpleAccent,
-              child: Icon(
-                Icons.sports_esports,
-                size: 50,
-                color: Colors.white,
-              ), */
             ),
             const SizedBox(height: 12),
-
-            // Nombre
             const Text(
               'Krystian Iwinski',
               style: TextStyle(
@@ -90,18 +80,16 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 12),
-
-            // Tarjeta introductoria
             Card(
               elevation: 4,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: const Padding(
-                padding: EdgeInsets.all(16.0),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
                 child: Column(
                   children: [
-                    Text(
+                    const Text(
                       '¡Bienvenido al Mundo Gamer!',
                       style: TextStyle(
                         fontSize: 18,
@@ -109,71 +97,59 @@ class HomeScreen extends StatelessWidget {
                         color: Colors.deepPurple,
                       ),
                     ),
-                    SizedBox(height: 8),
-                    Text(
-                      'Explora el fascinante universo de los videojuegos, desde los géneros más populares hasta los títulos más aclamados y sus detalles principales.',
+                    const SizedBox(height: 8),
+                    const Text(
+                      'Explora el fascinante universo de los videojuegos, desde los géneros más populares hasta tus títulos favoritos.',
                       textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 14),
+                    ),
+                    const SizedBox(height: 10),
+                    // Demostración del estado actualizado con Consumer
+                    Consumer<JuegosProvider>(
+                      builder: (context, provider, child) {
+                        return Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                          decoration: BoxDecoration(
+                            color: Colors.deepPurple.shade100,
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Text(
+                            'Juegos favoritos: ${provider.favoritos.length}',
+                            style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.deepPurple,
+                            ),
+                          ),
+                        );
+                      },
                     ),
                   ],
                 ),
               ),
             ),
-
             const Divider(height: 24, thickness: 1),
-
-            // Opciones de navegación
             Expanded(
               child: ListView(
                 children: [
-                  Container(
-                    margin: const EdgeInsets.only(bottom: 8),
-                    decoration: BoxDecoration(
-                      color: Colors.deepPurple.shade50,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: ListTile(
-                      leading: const Icon(Icons.category, color: Colors.deepPurple),
-                      title: const Text('Género'),
-                      subtitle: const Text('Estrategia, Acción, Rol, Deportes'),
-                      trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-                      onTap: () => Navigator.pushNamed(context, 'genero'),
-                    ),
+                  OpcionMenuWidget(
+                    icono: Icons.category,
+                    titulo: 'Géneros',
+                    subtitulo: 'Estrategia, Acción, Rol, Deportes',
+                    onTap: () => Navigator.pushNamed(context, 'genero'),
                   ),
-
-                  Container(
-                    margin: const EdgeInsets.only(bottom: 8),
-                    decoration: BoxDecoration(
-                      color: Colors.deepPurple.shade50,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: ListTile(
-                      leading: const Icon(Icons.videogame_asset, color: Colors.deepPurple),
-                      title: const Text('Título'),
-                      subtitle: const Text('Catálogo de videojuegos'),
-                      trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-                      onTap: () => Navigator.pushNamed(context, 'genero'),
-                    ),
+                  OpcionMenuWidget(
+                    icono: Icons.videogame_asset,
+                    titulo: 'Catálogo General',
+                    subtitulo: 'Ver todos los videojuegos disponibles',
+                    onTap: () => Navigator.pushNamed(context, 'titulo', arguments: 'Todos'),
                   ),
-
-                  Container(
-                    margin: const EdgeInsets.only(bottom: 8),
-                    decoration: BoxDecoration(
-                      color: Colors.deepPurple.shade50,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: ListTile(
-                      leading: const Icon(Icons.info_outline, color: Colors.deepPurple),
-                      title: const Text('Detalle'),
-                      subtitle: const Text('Información general del juego'),
-                      trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-                      onTap: () => Navigator.pushNamed(context, 'genero'),
-                    ),
+                  OpcionMenuWidget(
+                    icono: Icons.favorite,
+                    titulo: 'Mis Favoritos',
+                    subtitulo: 'Juegos marcados con me gusta',
+                    onTap: () => Navigator.pushNamed(context, 'titulo', arguments: 'Favoritos'),
                   ),
-
                   const SizedBox(height: 12),
-
-                  // Sección final con los botones de Correo e Información (AlertDialog)
                   Container(
                     padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
                     decoration: BoxDecoration(
@@ -184,14 +160,12 @@ class HomeScreen extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        // Ícono para enviar correo
                         IconButton(
                           icon: const Icon(Icons.email, size: 28, color: Colors.deepPurple),
                           tooltip: 'Enviar Correo',
                           onPressed: _enviarCorreo,
                         ),
                         const SizedBox(width: 20),
-                        // Ícono que activa el AlertDialog
                         IconButton(
                           icon: const Icon(Icons.info, size: 28, color: Colors.amber),
                           tooltip: 'Información de contacto',
@@ -205,11 +179,6 @@ class HomeScreen extends StatelessWidget {
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'Añadir Juego',
-        child: const Icon(Icons.add),
       ),
     );
   }

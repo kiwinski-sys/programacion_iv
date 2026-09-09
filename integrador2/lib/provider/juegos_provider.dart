@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:integrador1/modelos/juego_model.dart';
+import 'package:integrador1/modelos/juego_modelo.dart';
 
 class JuegosProvider extends ChangeNotifier {
   final List<Juego> _juegos = [

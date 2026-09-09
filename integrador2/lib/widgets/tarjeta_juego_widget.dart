@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:integrador1/modelos/juego_model.dart';
+import 'package:integrador1/modelos/juego_modelo.dart';
 import 'package:integrador1/provider/juegos_provider.dart';
 
 class TarjetaJuegoWidget extends StatelessWidget {

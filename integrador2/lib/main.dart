@@ -1,11 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:integrador1/provider/juegos_provider.dart';
 import 'package:integrador1/pantallas/casa_screen.dart';
 import 'package:integrador1/pantallas/detalle_juego_screen.dart';
 import 'package:integrador1/pantallas/genero_screen.dart';
 import 'package:integrador1/pantallas/titulo_juego_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => JuegosProvider()),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -17,15 +26,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Mis juegos favoritos',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.deepPurple,
       ),
       initialRoute: 'home',
-      routes:{
-        'home': (_) => HomeScreen(),
-        'genero': (_) => GeneroScreen(),
-        'titulo': (_) => TituloScreen(),
-        'detalle': (_) => DetalleScreen(),
-      }
+      routes: {
+        'home': (_) => const HomeScreen(),
+        'genero': (_) => const GeneroScreen(),
+        'titulo': (_) => const TituloScreen(),
+        'detalle': (_) => const DetalleScreen(),
+      },
     );
   }
 }
